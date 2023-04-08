@@ -5,6 +5,15 @@ terraform {
       version = "4.62.0"
     }
   }
+
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "TaulantAsllani"
+
+    workspaces {
+      name = "group-4-assignment-5"
+    }
+  }
 }
 
 provider "aws" {
